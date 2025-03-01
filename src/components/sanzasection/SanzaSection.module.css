@@ -1,0 +1,127 @@
+.sanju {
+    /* min-height: 80vh;  */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f3f1f1, hsl(30, 44%, 96%));
+    padding: 1rem;
+    position: relative;
+
+  }
+  
+  .sanza {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .sanzaHeader {
+    background: linear-gradient(135deg, #baab95, #8b7355);
+    /* padding: 1rem; */
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(237, 233, 233, 0.1);
+  }
+  
+  .sanzaTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+  
+  .sanzana {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+  }
+  
+  .sanjuCard {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+  }
+  
+  
+  .featureImage {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0.6rem;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+
+  }
+
+  .sanjuCard:hover .featureImage {
+    transform: scale(1.05);
+  }
+
+  .sanjuCard:hover {
+    transform: translateY(-5px);
+  }
+  
+  
+  .sanjuTitle {
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+    margin-bottom: 0.2rem;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+  }
+  
+  .sanjuText {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0;
+    font-weight: 400;
+    padding: 0 0.5rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sanzana {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6rem;
+    }
+  
+    .featureImage {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .sanjuText {
+      font-size: 0.75rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sanzana {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  
+    .featureImage {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .sanjuText {
+      font-size: 0.7rem;
+    }
+  }

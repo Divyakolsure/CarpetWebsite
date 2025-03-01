@@ -1,0 +1,93 @@
+
+.colourSection {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.colourGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.colourCard {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: transform 0.3s ease;
+
+}
+
+.carpetImage {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+
+}
+
+.colourCard:hover .carpetImage {
+    transform: scale(1.05);
+  }
+
+  .colourCard:hover {
+    transform: translateY(-5px);
+  }
+  
+
+.colourLabel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #555;
+    margin-top: 5px;
+}
+
+.colourLabel::before,
+.colourLabel::after {
+    content: "";
+    height: 1px;
+    background-color: #ccc;
+    width: 30px;
+    margin: 0 10px;
+}
+
+@media (max-width: 992px) {
+    .colourGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .colourGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .colourGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .colourLabel::before,
+    .colourLabel::after {
+        width: 20px;
+    }
+}

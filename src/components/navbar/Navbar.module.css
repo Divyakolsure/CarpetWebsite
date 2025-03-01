@@ -1,0 +1,149 @@
+/* Navbar.module.css */
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbarItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchBar select,
+.searchBar input {
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.searchBar select {
+  background-color: #f4f4f4;
+  border-right: 1px solid #ccc;
+}
+
+.searchBar button {
+  background-color: #445b6c;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.userActions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.bottomNav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: none;
+  list-style: none;
+  padding: 10px;
+  width: 200px;
+}
+
+.dropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.dropdownMenu li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdownMenu li:hover {
+  background-color: #f4f4f4;
+}
+
+/* Mobile Styles */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 99;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 60;
+  padding: 10px;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  transition: right 0.3s ease-in-out;
+}
+
+.mobileMenu.open {
+  left: 0;
+  display: block;
+}
+.mobileDropdown {
+  display: none;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.mobiledrop{
+  margin-bottom: 10px;
+  cursor: pointer;
+
+}
+
+.mobiledrop:hover .mobileDropdown {
+  display: block;
+}
+
+/* Show hamburger button on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .bottomNav {
+    display: none;
+  }
+}
